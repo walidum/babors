@@ -1,1 +1,32 @@
+apt update
+apt upgrade
+apt install wget
+
+-------- install java  
+https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz
+tar -xvzf openjdk-11_linux-x64_bin.tar.gz
+
+nano /etc/profile
+export JAVA_HOME=/home/jdk-11
+export PATH=${PATH}:${JAVA_HOME}/bin
+
+
+-----------maven 
+
+wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+tar -xvf apache-maven-3.6.3-bin.tar.gz
+mv apache-maven-3.6.3 /opt/
+M2_HOME='/opt/apache-maven-3.6.3'
+PATH="$M2_HOME/bin:$PATH"
+export PATH
+
+
+
+mkdir jenkins-2.290
+
+cd jenkins-2.290
+
+wget https://github.com/jenkinsci/jenkins/archive/refs/tags/jenkins-2.290.zip
+
+unzip jenkins-2.290.zip
 
