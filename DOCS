@@ -22,7 +22,7 @@ export PATH
 
 
 
-mkdir jenkins-2.290
+---------jenkins
 
 cd jenkins-2.290
 
@@ -30,3 +30,8 @@ wget https://github.com/jenkinsci/jenkins/archive/refs/tags/jenkins-2.290.zip
 
 unzip jenkins-2.290.zip
 
+cd jenkins-2.290
+
+mvn clean 
+
+apt -y install libfreetype6-dev
