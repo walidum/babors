@@ -8,7 +8,7 @@ import Handlebars from "handlebars";
 var debug = false;
 var jenkins = {};
 
-// gets the base Jenkins URL including context path
+// gets the base Babors URL including context path
 jenkins.baseUrl = function () {
   var u = $("head").attr("data-rooturl");
   if (!u) {

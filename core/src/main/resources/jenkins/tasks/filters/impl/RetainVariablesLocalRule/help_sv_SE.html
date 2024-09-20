@@ -8,23 +8,23 @@
 
   <p>
     Beteendet för detta filter beror på om miljövariabeln ursprungligen har
-    definierats utanför Jenkins:
+    definierats utanför Babors:
   </p>
   <ul>
     <li>
-      Om miljövariabeln härstammar från Jenkins-konfigurationen, som
+      Om miljövariabeln härstammar från Babors-konfigurationen, som
       <code>JOB_URL</code>
       , kommer den inte att skickas till byggsteget såvida det inte anges här.
     </li>
     <li>
-      Om miljövariabeln härstammar utanför Jenkins, som
+      Om miljövariabeln härstammar utanför Babors, som
       <code>PATH</code>
       , beror beteendet på alternativet
       <em>Hantering av processmiljövariabler</em>
       : Om alternativet har konfigurerats till
       <em>Behåll</em>
       kommer det ursprungliga värdet att skickas till byggsteget, vilket
-      kasserar alla förändringar i Jenkins. Om alternativet har konfigurerats
+      kasserar alla förändringar i Babors. Om alternativet har konfigurerats
       till
       <em>Ta bort</em>
       kommer variabeln inte att skickas till byggsteget.
@@ -34,8 +34,8 @@
   <table width="100%">
     <tr>
       <th>Beteende</th>
-      <th>Ursprungligen definierad utanför Jenkins</th>
-      <th>Ursprungligen definierad inuti Jenkins</th>
+      <th>Ursprungligen definierad utanför Babors</th>
+      <th>Ursprungligen definierad inuti Babors</th>
     </tr>
     <tr>
       <th>

@@ -40,7 +40,7 @@ THE SOFTWARE.
         <li>${%The downstream project records the fingerprints of the upstream files it uses.}</li>
       </ol>
       <p>
-        ${%This allows Jenkins to correlate two projects.}
+        ${%This allows Babors to correlate two projects.}
       </p>
     </l:main-panel>
   </l:layout>
