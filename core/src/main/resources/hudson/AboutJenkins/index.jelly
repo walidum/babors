@@ -38,7 +38,7 @@ THE SOFTWARE.
 
       <div class="jenkins-app-bar">
         <div class="jenkins-app-bar__content">
-          <h1 class="app-about-heading">Jenkins</h1>
+          <h1 class="app-about-heading">Babors</h1>
           <p class="app-about-version">
             ${%Version} ${app.VERSION}
           </p>
@@ -82,7 +82,7 @@ THE SOFTWARE.
             <tr>
               <td>
                 <a class="jenkins-table__link" href="https://github.com/jenkins-contrib-themes/jenkins-core-theme">
-                  Jenkins Contrib Themes
+                  Babors Contrib Themes
                 </a>
               </td>
               <td>

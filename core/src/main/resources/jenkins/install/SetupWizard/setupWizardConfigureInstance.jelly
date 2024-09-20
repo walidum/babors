@@ -32,7 +32,7 @@ THE SOFTWARE.
           <div style="margin: 2em;">
             <table>
             <tr>
-              <td><label for="root-url">${%Jenkins URL}:</label></td>
+              <td><label for="root-url">${%Babors URL}:</label></td>
               <td>
                 <input type="text" name="rootUrl" id="root-url" class="jenkins-input" value="" />
                 <div class="error-panel error" />
