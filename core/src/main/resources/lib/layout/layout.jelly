@@ -229,7 +229,7 @@ THE SOFTWARE.
                               tooltip="${null}">
               <l:hasPermission permission="${app.SYSTEM_READ}">
                 <dd:item icon="symbol-jenkins"
-                        text="${%About Jenkins}"
+                        text="${%About Babors}"
                          href="${rootURL}/manage/about" />
                 <dd:separator />
               </l:hasPermission>

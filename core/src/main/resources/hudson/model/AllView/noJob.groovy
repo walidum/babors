@@ -19,7 +19,7 @@ div {
     div(class: "empty-state-block") {
         if (isTopLevelAllView) {
             if (canSetUpDistributedBuilds || hasItemCreatePermission) {
-                h1(_("Welcome to Jenkins!"))
+                h1(_("Welcome to Babors!"))
 
                 p(_("noJobDescription"))
                 
@@ -100,7 +100,7 @@ div {
         if (h.isAnonymous() && !hasItemCreatePermission) {
             def canSignUp = app.securityRealm.allowsSignup()
 
-            h1(_("Welcome to Jenkins!"))
+            h1(_("Welcome to Babors!"))
 
             if (canSignUp) {
                 p(_("anonymousDescriptionSignUpEnabled"))
@@ -113,7 +113,7 @@ div {
                     li(class: "content-block") {
                         a(href: "${rootURL}/${app.securityRealm.loginUrl}?from=${request.requestURI}",
                                 class: "content-block__link") {
-                            span(_("Log in to Jenkins"))
+                            span(_("Log in to Babors"))
                             span(class: "trailing-icon") {
                                 l.icon(
                                         class: "icon-md",
@@ -125,7 +125,7 @@ div {
                     if (canSignUp) {
                         li(class: "content-block") {
                             a(href: "signup", class: "content-block__link") {
-                                span(_("Sign up for Jenkins"))
+                                span(_("Sign up for Babors"))
                                 span(class: "trailing-icon") {
                                     l.icon(
                                             class: "icon-md",

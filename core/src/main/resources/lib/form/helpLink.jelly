@@ -44,7 +44,7 @@ THE SOFTWARE.
       URL to the HTML page. Optional. If not given, no help icon is displayed.
 
       The URL should return a UTF-8 encoded HTML fragment wrapped in a <div> tag.
-      The URL is interpreted to be rooted at the context path of Jenkins,
+      The URL is interpreted to be rooted at the context path of Babors,
       so it's normally something like "/plugin/foobar/help/abc.html".
       ]]>
     </st:attribute>
