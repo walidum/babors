@@ -165,7 +165,7 @@ public class ErrorPageTest {
         try (JenkinsRule.WebClient wc = j.createWebClient()) {
             wc.setThrowExceptionOnFailingStatusCode(false);
 
-            @SuppressWarnings("deprecation") // we need to not access the usual Jenkins URLs
+            @SuppressWarnings("deprecation") // we need to not access the usual Babors URLs
             final Page page = wc.getPage(resourceRoot + "foo");
             wc.setThrowExceptionOnFailingStatusCode(true);
 
