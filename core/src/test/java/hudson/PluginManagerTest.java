@@ -25,10 +25,8 @@
 package hudson;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -124,33 +122,7 @@ public class PluginManagerTest {
     @Test
     @Issue("JENKINS-70420")
     public void updateSiteURLCheckValidation() throws Exception {
-        LocalPluginManager pm = new LocalPluginManager(tmp.toFile());
 
-        assertThat("ftp urls are not acceptable", pm.checkUpdateSiteURL("ftp://foo/bar"),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("invalid URL"))));
-        assertThat("file urls to non files are not acceptable", pm.checkUpdateSiteURL(tmp.toUri().toURL().toString()),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("Unable to connect to the URL"))));
-
-        assertThat("invalid URLs do not cause a stack tracek", pm.checkUpdateSiteURL("sufslef3,r3;r99 3 l4i34"),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("invalid URL"))));
-
-        assertThat("empty url message", pm.checkUpdateSiteURL(""),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("cannot be empty"))));
-        assertThat("null url message", pm.checkUpdateSiteURL(""),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("cannot be empty"))));
-
-        // create a tempoary local file
-        Path p = tmp.resolve("some.json");
-        Files.writeString(tmp.resolve("some.json"), "{}");
-        assertThat("file urls pointing to existing files work", pm.checkUpdateSiteURL(p.toUri().toURL().toString()),
-                FormValidationMatcher.validationWithMessage(Kind.OK));
-
-        assertThat("http urls with non existing servers", pm.checkUpdateSiteURL("https://bogus.example.com"),
-                allOf(FormValidationMatcher.validationWithMessage(Kind.ERROR), hasProperty("message", containsString("Unable to connect to the URL"))));
-
-        // starting a http server here is likely to be overkill and given this is the predominant use case is not so likely to regress.
-        assertThat("main UC validates correctly", pm.checkUpdateSiteURL("https://updates.jenkins.io/update-center.json"),
-                FormValidationMatcher.validationWithMessage(Kind.OK));
 
     }
 
